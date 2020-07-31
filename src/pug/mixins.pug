@@ -1,20 +1,37 @@
-mixin lessonsItem(img, teacher, title, date, time)
-    .lessons__item
-        .lessons__item-img
-            img(src=img, alt=title)
-        .lessons__item-content
+mixin lessonsItem(img, teacher, title, date, time, live)
+    if (live)
+        .lessons__item.lessons__item-live
             .lessons__item-left
-                .lessons__item-teacher
-                    .teacher-title Преподаватель
-                    .teacher-name=teacher
-                .lessons__item-title=title
+                .lessons__item-live-indicator
+                    i.icon-live
+                    span LIVE
+                .lessons__item-live-title=title
+                .lessons__item-live-teacher
+                    .teacher-avatar
+                        img(src=img, alt=img)
+                    span=teacher
             .lessons__item-right
-                .lessons__item-day
-                    .lessons__item-date=date
-                    .lessons__item-time=time
-                .lessons__item-actions
-                    button.lessons__item-btn.lessons__item-btn_general Перейти к уроку
-                    button.lessons__item-btn.lessons__item-btn_danger Отменить
+                .lessons__item-live-time
+                    i.icon-time
+                    span 00:15:23
+                button.lessons__item-btn_live Перейти к уроку
+    else
+        .lessons__item
+            .lessons__item-img
+                img(src=img, alt=title)
+            .lessons__item-content
+                .lessons__item-left
+                    .lessons__item-teacher
+                        .teacher-title Преподаватель
+                        .teacher-name=teacher
+                    .lessons__item-title=title
+                .lessons__item-right
+                    .lessons__item-day
+                        .lessons__item-date=date
+                        .lessons__item-time=time
+                    .lessons__item-actions
+                        button.lessons__item-btn.lessons__item-btn_general Перейти к уроку
+                        button.lessons__item-btn.lessons__item-btn_danger Отменить
 
 mixin contactsItem(img, name, subject, rating)
     .contacts__item

@@ -78,25 +78,11 @@ html
                             h2 Мои занятия
                             a(href="#") Все занятия
                         .lessons-content
-                            .lessons__item.lessons__item-live
-                                .lessons__item-left
-                                    .lessons__item-live-indicator
-                                        i.icon-live
-                                        span LIVE
-                                    .lessons__item-live-title 101 рецепт шаурмы дома
-                                    .lessons__item-live-teacher
-                                        .teacher-avatar
-                                            img(src="", alt="")
-                                        span Татьяна Николаевна
-                                .lessons__item-right
-                                    .lessons__item-live-time
-                                        i.icon-time
-                                        span 00:15:23
-                                    .lessons__item-live-btn Перейти к уроку
-                            +lessonsItem(img, 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00')
-                            +lessonsItem(img, 'Татьяна Николаевна', 'Спелая клубника', '18 Июн. 2020', 'в 18:00')
-                            +lessonsItem(img, 'Татьяна Николаевна', 'Секреты массажа', '18 Июн. 2020', 'в 18:00')
-                            +lessonsItem(img, 'Татьяна Николаевна', 'Правила приготовления пиццы', '18 Июн. 2020', 'в 18:00')
+                            +lessonsItem(img, 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00', true)
+                            +lessonsItem(img, 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00', false)
+                            +lessonsItem(img, 'Татьяна Николаевна', 'Спелая клубника', '18 Июн. 2020', 'в 18:00', false)
+                            +lessonsItem(img, 'Татьяна Николаевна', 'Секреты массажа', '18 Июн. 2020', 'в 18:00', false)
+                            +lessonsItem(img, 'Татьяна Николаевна', 'Правила приготовления пиццы', '18 Июн. 2020', 'в 18:00', false)
                     article.contacts
                         .contacts-header
                             h2
