@@ -27,6 +27,19 @@ mixin contactsItem(img, name, subject, rating)
                 a(href="#").contacts__item-link.icon-insta
                 a(href="#").contacts__item-link.icon-whatsapp
                 a(href="#").contacts__item-link.icon-email
+
+mixin verifiedContactsItem(img, title, contact)
+    .verified-contacts__item
+        .verified-contacts__item-img
+            img(src=img, alt=title)
+        .verified-contacts__item-title=title
+        .verified-contacts__item-contact=contact
+
+mixin newVerifiedContactsItem(img, title)
+    .verified-contacts__item-new
+        .verified-contacts__item-new-img
+            img(src=img, alt=title)
+        .verified-contacts__item-new-title + Привязать
                 
 doctype html
 html
@@ -132,6 +145,14 @@ html
                             +contactsItem(img, 'Сергей Степанович', 'Математика', "4.8")
                 aside.sidebar-right
                     .verified-contacts
+                        .verified-contacts__title Подтвержденные контакты
+                        ul.verified-contacts__list
+                            +verifiedContactsItem(img, 'Email', 'myemail@mail.ru')
+                            +verifiedContactsItem(img, 'Телефон', '+7 (495) 123-45-67')
+                            +verifiedContactsItem(img, 'Facebook', 'Владимир Ивано...')
+                        ul.verified-contacts__list-new
+                            +newVerifiedContactsItem(img, 'Вконтакте')
+                            +newVerifiedContactsItem(img, 'Instagram')
                     .achievements
                         .achievements-item
                         .achievements-item
