@@ -27,6 +27,9 @@ mixin contactsItem(img, name, subject, rating)
                 a(href="#").contacts__item-link.icon-insta
                 a(href="#").contacts__item-link.icon-whatsapp
                 a(href="#").contacts__item-link.icon-email
+        .contacts__item-rating
+            i.icon-rating
+            .contacts__item-rating=rating
 
 mixin verifiedContactsItem(img, title, contact)
     .verified-contacts__item
@@ -68,8 +71,12 @@ html
                     .header__title Профиль пользователя
                 .header-right
                     .header__search
-                        input(type="text" placeholder="Найти")
-                    .header__menu
+                        form(action="")
+                            input(type="text" placeholder="Найти" name="search")
+                            button(type="submit")
+                                i.icon-search
+                    button.header__menu
+                        i.icon-menu
                     .header__user
                         .header__user-text
                             .header__user-text-name Валентина Иванова
@@ -77,7 +84,7 @@ html
                         .header__user-profile
                             .header__user-profile-img
                                 img(src="", alt="")
-                            .header__user-profile-menu
+                            i.icon-dropdown
                     .header__notifications
                         i.icon-bell
                         .header__notifications-indicator.header__notifications-indicator_active
