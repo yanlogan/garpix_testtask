@@ -49,6 +49,11 @@ mixin statsItem(img, count, text)
             .stats__item-count=count
             .stats__item-text=text
 
+mixin socialItem(img, title)
+    a.social__item(href="#")
+        .social__item-img
+            img(src=img, alt=title)
+
 doctype html
 html
     head
@@ -168,4 +173,8 @@ html
         footer
             .container
                 .copyright Copyright © 2020 Talkme. Все права защищены
-                // TODO .social
+                .social
+                    +socialItem(img, 'Instagram')
+                    +socialItem(img, 'Twitter')
+                    +socialItem(img, 'Facebook')
+                    +socialItem(img, 'Вконтакте')
