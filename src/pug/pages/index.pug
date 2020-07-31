@@ -1,6 +1,7 @@
-mixin lessonsItem(teacher, title, date, time)
+mixin lessonsItem(img, teacher, title, date, time)
     .lessons__item
-        .lessons__item-image
+        .lessons__item-img
+            img(src=img, alt=title)
         .lessons__item-content
             .lessons__item-left
                 .lessons__item-teacher
@@ -116,10 +117,10 @@ html
                                         i.icon-time
                                         span 00:15:23
                                     .lessons_item-live-btn Перейти к уроку
-                            +lessonsItem('Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00')
-                            +lessonsItem('Татьяна Николаевна', 'Спелая клубника', '18 Июн. 2020', 'в 18:00')
-                            +lessonsItem('Татьяна Николаевна', 'Секреты массажа', '18 Июн. 2020', 'в 18:00')
-                            +lessonsItem('Татьяна Николаевна', 'Правила приготовления пиццы', '18 Июн. 2020', 'в 18:00')
+                            +lessonsItem(img, 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00')
+                            +lessonsItem(img, 'Татьяна Николаевна', 'Спелая клубника', '18 Июн. 2020', 'в 18:00')
+                            +lessonsItem(img, 'Татьяна Николаевна', 'Секреты массажа', '18 Июн. 2020', 'в 18:00')
+                            +lessonsItem(img, 'Татьяна Николаевна', 'Правила приготовления пиццы', '18 Июн. 2020', 'в 18:00')
                     article.contacts
                         .contacts-header
                             h2
