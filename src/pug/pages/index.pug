@@ -1,7 +1,118 @@
+mixin lessonsItem(teacher, title, date, time)
+    .lessons__item
+        .lessons__item-image
+        .lessons__item-content
+            .lessons__item-left
+                .lessons__item-teacher
+                    .teacher-title Преподаватель
+                    .teacher-name=teacher
+                .lessons__item-title=title
+            .lessons__item-right
+                .lessons__item-day
+                    .lessons__item-date=date
+                    .lessons__item-time=time
+                .lessons__item-actions
+                    button.lessons__item-btn.lessons__item-btn_general Перейти к уроку
+                    button.lessons__item-btn.lessons__item-btn_danger Отменить
+
+
 doctype html
 html
     head
         title Talk me
         link(rel='stylesheet' href='static/css/main.css')
     body
-        
+        header
+            .container
+                .header-left
+                    .header__logo
+                        img(src="", alt="")
+                    .header__title Профиль пользователя
+                .header-right
+                    .header__search
+                        input(type="text" placeholder="Найти")
+                    .header__menu
+                    .header__user
+                        .header__user-text
+                            .header__user-text-name Валентина Иванова
+                            .header__user-text-title Пользователь
+                        .header__user-profile
+                            .header__user-profile-avatar
+                                img(src="", alt="")
+                            .header__user-profile-menu
+                    .header__notifications
+                        .header__notifications-image
+                        .header__notifications-indicator.header__notifications-indicator_active
+        main
+            .container
+                aside.sidebar-left
+                    .user
+                        .user-avatar
+                            img(src="", alt="")
+                        .user-btn
+                            button Стать преподавателем
+                    // TODO .menu
+                    // TODO .calendar
+                section.content
+                    article.about
+                        .about-header
+                            .about-header__left
+                                h1 Профиль
+                                .profile-id ID 1232345
+                            .about-header__right
+                                .about-btn
+                                    button
+                                        i.icon-add
+                                        span Разместить урок
+                        .about-content
+                            h3 Валентина Константинопольская
+                            span 35 лет, Москва
+                            .about-content__gender
+                                i.icon-gender
+                                span Женский
+                            .about-content__text
+                                h4 Обо мне
+                                p Для современного мира социально-экономическое развитие требует определения и уточнения переосмысления внешнеэкономических политик. Высокотехнологичная концепция общественного уклада требует определения и уточнения своевременного выполнения сверхзадачи. А также действия представителей оппозиции и по сей день остаются уделом либералов, которые жаждут быть обнародованы.
+                    article.lessons
+                        .lessons-header
+                            h2 Мои занятия
+                            a(href="#") Все занятия
+                        .lessons-content
+                            .lessons__item.lessons__item-live
+                                .lessons_item-left
+                                    .lessons_item-live-indicator
+                                        i.icon-live
+                                        span LIVE
+                                    .lessons_item-live-title 101 рецепт шаурмы дома
+                                    .lessons_item-live-teacher
+                                        .teacher-avatar
+                                            img(src="", alt="")
+                                        span Татьяна Николаевна
+                                .lessons_item-right
+                                    .lessons_item-live-time
+                                        i.icon-time
+                                        span 00:15:23
+                                    .lessons_item-live-btn Перейти к уроку
+                            +lessonsItem('Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00')
+                            +lessonsItem('Татьяна Николаевна', 'Спелая клубника', '18 Июн. 2020', 'в 18:00')
+                            +lessonsItem('Татьяна Николаевна', 'Секреты массажа', '18 Июн. 2020', 'в 18:00')
+                            +lessonsItem('Татьяна Николаевна', 'Правила приготовления пиццы', '18 Июн. 2020', 'в 18:00')
+                    // TODO article.contacts
+                        .contacts-header
+                            h2
+                        .contacts-content
+                            .contacts__item
+                            .contacts__item.contacts__item_hover
+                            .contacts__item
+                            .contacts__item
+                            .contacts__item
+                // TODO aside.sidebar-right
+                    .verified-contacts
+                    .achievements
+                        .achievements-item
+                        .achievements-item
+                        .achievements-item
+        footer
+            .container
+                .copyright Copyright © 2020 Talkme. Все права защищены
+                // TODO .social
