@@ -49,17 +49,17 @@ html
                             .header__user-text-name Валентина Иванова
                             .header__user-text-title Пользователь
                         .header__user-profile
-                            .header__user-profile-avatar
+                            .header__user-profile-img
                                 img(src="", alt="")
                             .header__user-profile-menu
                     .header__notifications
-                        .header__notifications-image
+                        i.icon-bell
                         .header__notifications-indicator.header__notifications-indicator_active
         main
             .container
                 aside.sidebar-left
                     .user
-                        .user-avatar
+                        .user-img
                             img(src="", alt="")
                         .user-btn
                             button Стать преподавателем
@@ -130,7 +130,7 @@ html
                             +contactsItem(img, 'Сергей Степанович', 'Математика', "4.8")
                             +contactsItem(img, 'Анна Алексеевна', 'Информатика', "4.8")
                             +contactsItem(img, 'Сергей Степанович', 'Математика', "4.8")
-                // TODO aside.sidebar-right
+                aside.sidebar-right
                     .verified-contacts
                     .achievements
                         .achievements-item
