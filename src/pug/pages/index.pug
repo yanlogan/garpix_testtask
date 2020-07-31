@@ -15,7 +15,18 @@ mixin lessonsItem(teacher, title, date, time)
                     button.lessons__item-btn.lessons__item-btn_general Перейти к уроку
                     button.lessons__item-btn.lessons__item-btn_danger Отменить
 
-
+mixin contactsItem(img, name, subject, rating)
+    .contacts__item
+        .contacts__item-img
+            img(src=img, alt=name)
+        .contacts__item-content
+            .contacts__item-name=name
+            .contacts__item-subject=subject
+            .contacts__item-links
+                a(href="#").contacts__item-link.icon-insta
+                a(href="#").contacts__item-link.icon-whatsapp
+                a(href="#").contacts__item-link.icon-email
+                
 doctype html
 html
     head
@@ -53,7 +64,7 @@ html
                             button Стать преподавателем
                     .menu
                         ul
-                            li.menu__item.menu__item_active Мом данные
+                            li.menu__item.menu__item_active Мои данные
                             li.menu__item Мои занятия
                             li.menu__item Мои преподаватели
                             li.menu__item Чат
@@ -109,15 +120,15 @@ html
                             +lessonsItem('Татьяна Николаевна', 'Спелая клубника', '18 Июн. 2020', 'в 18:00')
                             +lessonsItem('Татьяна Николаевна', 'Секреты массажа', '18 Июн. 2020', 'в 18:00')
                             +lessonsItem('Татьяна Николаевна', 'Правила приготовления пиццы', '18 Июн. 2020', 'в 18:00')
-                    // TODO article.contacts
+                    article.contacts
                         .contacts-header
                             h2
                         .contacts-content
-                            .contacts__item
-                            .contacts__item.contacts__item_hover
-                            .contacts__item
-                            .contacts__item
-                            .contacts__item
+                            +contactsItem(img, 'Владимир Иванович', 'Математика', '4.8')
+                            +contactsItem(img, 'Татьяна Николаевна', 'География', "4.9").contacts__item_hover
+                            +contactsItem(img, 'Сергей Степанович', 'Математика', "4.8")
+                            +contactsItem(img, 'Анна Алексеевна', 'Информатика', "4.8")
+                            +contactsItem(img, 'Сергей Степанович', 'Математика', "4.8")
                 // TODO aside.sidebar-right
                     .verified-contacts
                     .achievements
