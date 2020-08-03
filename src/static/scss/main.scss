@@ -26,15 +26,121 @@ body {
         width: 110px;
         fill: $color-logo;
     }
+    &-search {
+        width: 24px;
+        fill: $color-primary;
+    }
+    &-dropdown {
+        width: 12px;
+        fill: $color-light;
+    }
+    &-menu {
+        width: 20px;
+        fill: #fff;
+    }
+    &-bell {
+        width: 17px;
+        fill: $color-light;
+    }
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    &-left {
+    padding: 15px 0;
+    font-size: 16px;
+    
+    &-left, &-right {
         display: flex;
+        align-items: center;
     }
-    &-right {
+
+    &__title {
+        width: 110px;
+        margin-left: 13px;
+    }
+    &__search {
+        form {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 430px;
+            height: 56px;
+            input[type=text] {
+                width: 100%;
+                padding: 20px;
+                color: $color-light;
+                background: $color-background;
+                border: none;
+                border-radius: 50px;
+                outline: none;
+            }
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                padding: 15px 23px;
+                background: $color-search;
+                outline: none;
+                border: none;
+                border-radius: 0 50px 50px 0;
+            }
+        }
+    }
+    &__menu {
+        width: 54px;
+        height: 54px;
+        margin-left: 30px;
+        padding: 0;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        background: $color-primary;
+    }
+    &__user {
         display: flex;
+        align-items: center;
+        margin-left: 30px;
+        &-text {
+            margin-right: 10px;
+            text-align: right;
+            &-title {
+                font-size: 14px;
+                color: $color-light;
+            }
+        }
+        &-profile {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            &-img {
+                width: 54px;
+                height: 54px;
+                margin-right: 10px;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    position: relative;
+                    top: 0;
+                    left: -13px;
+                    width: 85px;
+                }
+            }
+        }
+    }
+    &__notifications {
+        position: relative;
+        margin-left: 30px;
+        &-indicator {
+            position: absolute;
+            top: -2px;
+            right: -4px;
+            width: 8px;
+            height: 8px;
+            border: 2px solid #fff; 
+            border-radius: 50%;
+            background: $color-accent;
+        }
     }
 }

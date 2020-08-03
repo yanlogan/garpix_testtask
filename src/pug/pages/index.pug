@@ -19,19 +19,23 @@ html
                             form(action="")
                                 input(type="text" placeholder="Найти" name="search")
                                 button(type="submit")
-                                    i.icon-search
+                                    svg(viewBox="0 0 24 25").icon.icon-search
+                                        use(xlink:href="static/img/svg/symbol/sprite.svg#search")
                         button.header__menu
-                            i.icon-menu
+                            svg(viewBox="0 0 20 20").icon.icon-menu
+                                    use(xlink:href="static/img/svg/symbol/sprite.svg#menu")
                         .header__user
                             .header__user-text
                                 .header__user-text-name Валентина Иванова
                                 .header__user-text-title Пользователь
                             .header__user-profile
                                 .header__user-profile-img
-                                    img(src="", alt="")
-                                i.icon-dropdown
+                                    img(src="static/img/avatar.jpg", alt="Валентина Ивановна")
+                                svg(viewBox="0 0 12 8").icon.icon-dropdown
+                                    use(xlink:href="static/img/svg/symbol/sprite.svg#dropdown")
                         .header__notifications
-                            i.icon-bell
+                            svg(viewBox="0 0 17 22").icon.icon-bell
+                                use(xlink:href="static/img/svg/symbol/sprite.svg#bell")
                             .header__notifications-indicator.header__notifications-indicator_active
         main
             .container
