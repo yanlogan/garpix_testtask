@@ -6,6 +6,11 @@
     src: url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
 $color-logo: #5BB6F4;
 
 body {
@@ -94,6 +99,7 @@ body {
         width: 10px;
         fill: #fff;
     }
+
 }
 
 .header {
@@ -422,6 +428,9 @@ body {
         }
     }
     section {
+        article {
+            border-top: 3px solid $color-background;
+        }
         .about {
             margin-bottom: 75px;
             &-header {
@@ -496,12 +505,175 @@ body {
             }
         }
         .lessons {
+            position: relative;
+            width: 760px;
+            &:before {
+                display: block;
+                content: '';
+                position: absolute;
+                top: -3px;
+                left: 0;
+                width: 100px;
+                height: 3px;
+                background: $color-accent;
+            }
             &-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 h2 {
                     margin: 0;
-                    padding: 0;
+                    padding: 20px 0;
                     font-size: 20px;
                 }
+                a {
+                    &:link, &:active, &:visited {
+                        color: $color-primary;
+                    }
+                }
+            }
+            &__item {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 150px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+
+                &-live {
+                    padding: 20px 30px;
+                    color: #fff;
+                    background: $color-primary;
+                    &-indicator {
+                        display: flex;
+                        margin-bottom: 8px;
+                        span {
+                            font-size: 22px;
+                            text-transform: uppercase;
+                            color: $color-live;
+                        }
+                    }
+                    &-img {
+                        width: 30px;
+                        height: 32px;
+                        margin-right: 4px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    &-title {
+                        font-size: 22px;
+                        margin-bottom: 5px;
+                    }
+                    &-teacher {
+                        display: flex;
+                        align-items: center;
+                        font-size: 18px;
+                        .teacher-avatar {
+                            width: 40px;
+                            height: 40px;
+                            margin-right: 7px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    &-time {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 14px;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 31px;
+                        span {
+                            margin-left: 10px;
+                        }
+                    }
+                    .icon-time {
+                        width: 30px;
+                        fill: $color-live-time;
+                    }
+                    
+                }
+                &-btn {
+                    display: block;
+                    width: 164px;
+                    padding: 12px 20px;
+                    font-size: 14px;
+                    color: #fff;
+                    text-decoration: none;
+                    border: none;
+                    outline: none;
+                    border-radius: 50px;
+                    
+                    &_live {
+                        color: #000;
+                        background: #fff;
+                    }
+                    &_general {
+                        background: $color-primary;
+                    }
+                    &_danger {
+                        background: $color-secondary;
+                    }
+                }
+                &-img {
+                    width: 120px;
+                    overflow: hidden;
+                    img {
+                        position: relative;
+                        top: 0;
+                        left: -35px;
+                        height: 100%;
+                    }
+                }
+                &-content {
+                    display: flex;
+                    justify-content: space-between;
+                    flex: 1;
+                    padding: 16px 30px 16px 23px;
+                    &-right {
+                        display: flex;
+                        align-items: center;
+                    }
+                    .lessons__item-btn_general {
+                        margin-bottom: 10px;
+                    }
+                    &-left {
+                        max-width: 250px;
+                    }
+                }
+                &-teacher {
+                    margin-bottom: 23px;
+                    .teacher {
+                        &-title {
+                            margin-bottom: 5px;
+                            font-size: 12px;
+                            color: $color-light;
+                        }
+                    }
+                }
+                &-title {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                &-day {
+                    margin-right: 40px;
+                    font-family: 'Roboto', sans-serif;
+                    text-align: right;
+                }
+                &-date {
+                    color: $color-primary;
+                    margin-bottom: 7px;
+                }
+                &-time {
+                    color: $color-secondary;
+                }
+                
             }
         }
     }

@@ -3,29 +3,31 @@ mixin lessonsItem(img, teacher, title, date, time, live)
         .lessons__item.lessons__item-live
             .lessons__item-left
                 .lessons__item-live-indicator
-                    i.icon-live
+                    .lessons__item-live-img
+                        img(src="static/img/live.png" alt="live")
                     span LIVE
                 .lessons__item-live-title=title
                 .lessons__item-live-teacher
                     .teacher-avatar
-                        img(src=img, alt=img)
+                        img(src="static/img/contact_2.jpg", alt="Татьяна Николаевна")
                     span=teacher
             .lessons__item-right
                 .lessons__item-live-time
-                    i.icon-time
+                    svg(viewBox="0 0 30 31").icon.icon-time
+                        use(xlink:href="static/img/svg/symbol/sprite.svg#time")
                     span 00:15:23
-                a(href="#").lessons__item-btn_live Перейти к уроку
+                a(href="#").lessons__item-btn.lessons__item-btn_live Перейти к уроку
     else
         .lessons__item
             .lessons__item-img
                 img(src=img, alt=title)
             .lessons__item-content
-                .lessons__item-left
+                .lessons__item-content-left
                     .lessons__item-teacher
-                        .teacher-title Преподаватель
+                        .teacher-title Преподаватель:
                         .teacher-name=teacher
                     .lessons__item-title=title
-                .lessons__item-right
+                .lessons__item-content-right
                     .lessons__item-day
                         .lessons__item-date=date
                         .lessons__item-time=time
