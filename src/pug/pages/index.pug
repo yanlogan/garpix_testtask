@@ -39,84 +39,96 @@ html
                             .header__notifications-indicator.header__notifications-indicator_active
         main
             .container
-                aside.sidebar-left
-                    .user
-                        .user-img
-                            img(src="", alt="")
-                        .user-btn
-                            button Стать преподавателем
-                    .menu
-                        ul
-                            li.menu__item.menu__item_active Мои данные
-                            li.menu__item Мои занятия
-                            li.menu__item Мои преподаватели
-                            li.menu__item Чат
-                            li.menu__item Мой кошелек
-                            li.menu__item Настройки
-                            li.menu__item.menu__item_danger Выход
-                    .calendar
-                        .calendar__img
-                            img(src="", alt="")
-                        .calendar__text Мой календарь
-                        i.icon-close
-                section.content
-                    article.about
-                        .about-header
-                            .about-header__left
-                                h1 Профиль
-                                .profile-id ID 1232345
-                            .about-header__right
-                                .about-btn
-                                    button
-                                        i.icon-add
-                                        span Разместить урок
-                        .about-content
-                            h3 Валентина Константинопольская
-                            span 35 лет, Москва
-                            .about-content__gender
-                                i.icon-gender
-                                span Женский
-                            .about-content__text
-                                h4 Обо мне
-                                p Для современного мира социально-экономическое развитие требует определения и уточнения переосмысления внешнеэкономических политик. Высокотехнологичная концепция общественного уклада требует определения и уточнения своевременного выполнения сверхзадачи. А также действия представителей оппозиции и по сей день остаются уделом либералов, которые жаждут быть обнародованы.
-                    article.lessons
-                        .lessons-header
-                            h2 Мои занятия
-                            a(href="#") Все занятия
-                        .lessons-content
-                            +lessonsItem(img, 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00', true)
-                            +lessonsItem(img, 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00', false)
-                            +lessonsItem(img, 'Татьяна Николаевна', 'Спелая клубника', '18 Июн. 2020', 'в 18:00', false)
-                            +lessonsItem(img, 'Татьяна Николаевна', 'Секреты массажа', '18 Июн. 2020', 'в 18:00', false)
-                            +lessonsItem(img, 'Татьяна Николаевна', 'Правила приготовления пиццы', '18 Июн. 2020', 'в 18:00', false)
-                    article.contacts
-                        .contacts-header
-                            h2
-                        .contacts-content
-                            +contactsItem(img, 'Владимир Иванович', 'Математика', '4.8')
-                            +contactsItem(img, 'Татьяна Николаевна', 'География', "4.9").contacts__item_hover
-                            +contactsItem(img, 'Сергей Степанович', 'Математика', "4.8")
-                            +contactsItem(img, 'Анна Алексеевна', 'Информатика', "4.8")
-                            +contactsItem(img, 'Сергей Степанович', 'Математика', "4.8")
-                aside.sidebar-right
-                    .verified-contacts
-                        .verified-contacts__title Подтвержденные контакты
-                        ul.verified-contacts__list
-                            +verifiedContactsItem(img, 'Email', 'myemail@mail.ru')
-                            +verifiedContactsItem(img, 'Телефон', '+7 (495) 123-45-67')
-                            +verifiedContactsItem(img, 'Facebook', 'Владимир Ивано...')
-                        ul.verified-contacts__list-new
-                            +newVerifiedContactsItem(img, 'Вконтакте')
-                            +newVerifiedContactsItem(img, 'Instagram')
-                    .stats
-                        +statsItem(img, '25', 'Занятий пройдено')
-                        +statsItem(img, '139', 'Часов общего обучения')
-                        +statsItem(img, '15', 'Запланированныx занятий')
+                .main
+                    aside.sidebar-left
+                        .user
+                            .user-img
+                                img(src="static/img/avatar.jpg", alt="Валентина Константинопольская")
+                            .user-btn
+                                button Стать преподавателем
+                        .menu
+                            ul
+                                li
+                                    a(href="#").menu__item.menu__item_active Мои данные
+                                li
+                                    a(href="#").menu__item Мои занятия
+                                li
+                                    a(href="#").menu__item Мои преподаватели
+                                li
+                                    a(href="#").menu__item Чат
+                                li
+                                    a(href="#").menu__item Мой кошелек
+                                li
+                                    a(href="#").menu__item Настройки
+                                li
+                                    a(href="#").menu__item.menu__item_danger Выход
+                        .calendar
+                            .calendar__img
+                                svg(viewBox="0 0 62 57").icon.icon-calendar
+                                    use(xlink:href="static/img/svg/symbol/sprite.svg#calendar")
+                            .calendar__text Мой календарь
+                            .calendar__close
+                                svg(viewBox="0 0 10 9").icon.icon-close
+                                    use(xlink:href="static/img/svg/symbol/sprite.svg#close")
+                    section.content
+                        article.about
+                            .about-header
+                                .about-header__left
+                                    h1 Профиль
+                                    .profile-id ID 1232345
+                                .about-header__right
+                                    .about-btn
+                                        button
+                                            i.icon-add
+                                            span Разместить урок
+                            .about-content
+                                h3 Валентина Константинопольская
+                                span 35 лет, Москва
+                                .about-content__gender
+                                    i.icon-gender
+                                    span Женский
+                                .about-content__text
+                                    h4 Обо мне
+                                    p Для современного мира социально-экономическое развитие требует определения и уточнения переосмысления внешнеэкономических политик. Высокотехнологичная концепция общественного уклада требует определения и уточнения своевременного выполнения сверхзадачи. А также действия представителей оппозиции и по сей день остаются уделом либералов, которые жаждут быть обнародованы.
+                        article.lessons
+                            .lessons-header
+                                h2 Мои занятия
+                                a(href="#") Все занятия
+                            .lessons-content
+                                +lessonsItem(img, 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00', true)
+                                +lessonsItem(img, 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00', false)
+                                +lessonsItem(img, 'Татьяна Николаевна', 'Спелая клубника', '18 Июн. 2020', 'в 18:00', false)
+                                +lessonsItem(img, 'Татьяна Николаевна', 'Секреты массажа', '18 Июн. 2020', 'в 18:00', false)
+                                +lessonsItem(img, 'Татьяна Николаевна', 'Правила приготовления пиццы', '18 Июн. 2020', 'в 18:00', false)
+                        article.contacts
+                            .contacts-header
+                                h2
+                            .contacts-content
+                                +contactsItem(img, 'Владимир Иванович', 'Математика', '4.8')
+                                +contactsItem(img, 'Татьяна Николаевна', 'География', "4.9").contacts__item_hover
+                                +contactsItem(img, 'Сергей Степанович', 'Математика', "4.8")
+                                +contactsItem(img, 'Анна Алексеевна', 'Информатика', "4.8")
+                                +contactsItem(img, 'Сергей Степанович', 'Математика', "4.8")
+                    aside.sidebar-right
+                        .verified-contacts
+                            .verified-contacts__title Подтвержденные контакты
+                            ul.verified-contacts__list
+                                +verifiedContactsItem(img, 'Email', 'myemail@mail.ru')
+                                +verifiedContactsItem(img, 'Телефон', '+7 (495) 123-45-67')
+                                +verifiedContactsItem(img, 'Facebook', 'Владимир Ивано...')
+                            ul.verified-contacts__list-new
+                                +newVerifiedContactsItem(img, 'Вконтакте')
+                                +newVerifiedContactsItem(img, 'Instagram')
+                        .stats
+                            +statsItem(img, '25', 'Занятий пройдено')
+                            +statsItem(img, '139', 'Часов общего обучения')
+                            +statsItem(img, '15', 'Запланированныx занятий')
         footer
             .container
-                .copyright Copyright © 2020 Talkme. Все права защищены
-                .social
-                    +socialItem(img, 'Instagram')
-                    +socialItem(img, 'Twitter')
-                    +socialItem(img, 'Facebook')
-                    +socialItem(img, 'Вконтакте')
+                .footer
+                    .copyright Copyright © 2020 Talkme. Все права защищены
+                    .social
+                        +socialItem(img, 'Instagram')
+                        +socialItem(img, 'Twitter')
+                        +socialItem(img, 'Facebook')
+                        +socialItem(img, 'Вконтакте')

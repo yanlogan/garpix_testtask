@@ -26,6 +26,10 @@ body {
         width: 110px;
         fill: $color-logo;
     }
+    &-close {
+        width: 9px;
+        fill: $color-light;
+    }
     &-search {
         width: 24px;
         fill: $color-primary;
@@ -41,6 +45,10 @@ body {
     &-bell {
         width: 17px;
         fill: $color-light;
+    }
+    &-calendar {
+        width: 62px;
+        fill: url(#cpaint0_linear);
     }
 }
 
@@ -70,7 +78,7 @@ body {
                 width: 100%;
                 padding: 20px;
                 color: $color-light;
-                background: $color-background;
+                background: $color-background-light;
                 border: none;
                 border-radius: 50px;
                 outline: none;
@@ -81,7 +89,7 @@ body {
                 right: 0;
                 height: 100%;
                 padding: 15px 23px;
-                background: $color-search;
+                background: $color-background;
                 outline: none;
                 border: none;
                 border-radius: 0 50px 50px 0;
@@ -141,6 +149,108 @@ body {
             border: 2px solid #fff; 
             border-radius: 50%;
             background: $color-accent;
+        }
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 80px;
+    aside {
+        width: 260px;
+        &.sidebar-left {
+            margin-right: 40px;
+
+            .user {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                margin-bottom: 18px;
+                &-img {
+                    width: 260px;
+                    height: 260px;
+                    margin-bottom: 10px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &-btn {
+                    font-size: 14px;
+                    button {
+                        padding: 15px 20px;
+                        color: #fff;
+                        background: $color-secondary;
+                        border: none;
+                        border-radius: 50px;
+                        outline: none;
+                    }
+                }
+            }
+
+            .menu {
+                margin-bottom: 20px;
+                ul {
+                    margin: 0;
+                    padding: 15px 30px;
+                    list-style: none;
+                    background: $color-background;
+                    border-radius: 10px;
+                    li {
+                        margin: 0;
+                        padding: 0;
+                        border-bottom: 1px solid $color-menu-border;
+                        &:last-child {
+                            border: none;
+                        }
+                        a.menu__item {
+                            display: inline-block;
+                            padding: 25px 0;
+                            text-decoration: none;
+                            outline: none;
+                            &:link, &:active, &:visited {
+                                color: $color-menu-text;
+                            }
+                            &_active {
+                                &:link, &:active, &:visited {
+                                    color: $color-primary;
+                                }
+                            }
+                            &_danger {
+                                &:link, &:active, &:visited {
+                                    color: $color-secondary;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .calendar {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 22px 30px;
+                border-radius: 10px;
+                &__img {
+                    margin-right: 18px;
+                }
+                &__text {
+                    // font-weight: 700;
+                }
+                &__close {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+            }
+        }
+        &.sidebar-right {
+            margin-left: 40px;
         }
     }
 }
