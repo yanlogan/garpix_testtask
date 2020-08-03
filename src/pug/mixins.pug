@@ -43,12 +43,16 @@ mixin contactsItem(img, name, subject, rating)
             .contacts__item-name=name
             .contacts__item-subject=subject
             .contacts__item-links
-                a(href="#").contacts__item-link.icon-insta
-                a(href="#").contacts__item-link.icon-whatsapp
-                a(href="#").contacts__item-link.icon-email
+                a(href="#").contacts__item-link
+                    img(src="static/img/instagram.png" alt="instagram")
+                a(href="#").contacts__item-link
+                    img(src="static/img/whatsapp.png" alt="whatsapp")
+                a(href="#").contacts__item-link
+                    img(src="static/img/email.png" alt="email")
         .contacts__item-rating
-            i.icon-rating
-            .contacts__item-rating=rating
+            svg(viewBox="0 0 15 14").icon.icon-rating
+                use(xlink:href="static/img/svg/symbol/sprite.svg#star")
+            .contacts__item-rating-value=rating
 
 mixin verifiedContactsItem(viewBox, href, id, title, contact, newContact)
     if (newContact)
@@ -65,8 +69,6 @@ mixin verifiedContactsItem(viewBox, href, id, title, contact, newContact)
             .verified-contacts__item-text
                 .verified-contacts__item-title=title
                 .verified-contacts__item-contact=contact
-        
-    
 
 mixin statsItem(viewBox, href, id, count, text)
     .stats__item
