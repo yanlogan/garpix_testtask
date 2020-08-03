@@ -48,25 +48,31 @@ mixin contactsItem(img, name, subject, rating)
             i.icon-rating
             .contacts__item-rating=rating
 
-mixin verifiedContactsItem(img, title, contact)
-    .verified-contacts__item
-        .verified-contacts__item-img
-            img(src=img, alt=title)
-        .verified-contacts__item-title=title
-        .verified-contacts__item-contact=contact
+mixin verifiedContactsItem(viewBox, href, id, title, contact, newContact)
+    if (newContact)
+        li.verified-contacts__item.verified-contacts__item_new
+            .verified-contacts__item-img
+                svg(viewBox=viewBox class=`icon icon-${id}`)
+                    use(xlink:href=href)
+            .verified-contacts__item-title + Привязать
+    else
+        li.verified-contacts__item
+            .verified-contacts__item-img(class=`verified-contacts__item-img_${id}`)
+                svg(viewBox=viewBox class=`icon icon-${id}`)
+                    use(xlink:href=href)
+            .verified-contacts__item-text
+                .verified-contacts__item-title=title
+                .verified-contacts__item-contact=contact
+        
+    
 
-mixin newVerifiedContactsItem(img, title)
-    .verified-contacts__item-new
-        .verified-contacts__item-new-img
-            img(src=img, alt=title)
-        .verified-contacts__item-new-title + Привязать
-
-mixin statsItem(img, count, text)
+mixin statsItem(viewBox, href, id, count, text)
     .stats__item
-        .stats__item-img
-            img(src=img, alt=title)
+        .stats__item-img(class=`stats__item-img_${id}`)
+            svg(viewBox=viewBox class=`icon icon-${id}`)
+                use(xlink:href=href)
         .stats__item-content
-            .stats__item-count=count
+            .stats__item-count(class=`stats__item-count_${id}`)=count
             .stats__item-text=text
 
 mixin socialItem(img, title)

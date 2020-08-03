@@ -111,18 +111,20 @@ html
                                 +contactsItem(img, 'Сергей Степанович', 'Математика', "4.8")
                     aside.sidebar-right
                         .verified-contacts
-                            .verified-contacts__title Подтвержденные контакты
                             ul.verified-contacts__list
-                                +verifiedContactsItem(img, 'Email', 'myemail@mail.ru')
-                                +verifiedContactsItem(img, 'Телефон', '+7 (495) 123-45-67')
-                                +verifiedContactsItem(img, 'Facebook', 'Владимир Ивано...')
-                            ul.verified-contacts__list-new
-                                +newVerifiedContactsItem(img, 'Вконтакте')
-                                +newVerifiedContactsItem(img, 'Instagram')
+                                .verified-contacts__list-title Подтвержденные контакты
+                                +verifiedContactsItem('0 0 24 18', 'static/img/svg/symbol/sprite.svg#email', 'email', 'Email', 'myemail@mail.ru', false)
+                                +verifiedContactsItem('0 0 24 24', 'static/img/svg/symbol/sprite.svg#phone', 'phone', 'Телефон', '+7 (495) 123-45-67', false)
+                                +verifiedContactsItem('0 0 13 28', 'static/img/svg/symbol/sprite.svg#facebook', 'facebook', 'Facebook', 'Владимир Ивано..', false)
+                                +verifiedContactsItem('0 0 19 12', 'static/img/svg/symbol/sprite.svg#vk', 'vk', 'Вконтакте', '', true)
+                                +verifiedContactsItem('0 0 19 19', 'static/img/svg/symbol/sprite.svg#insta', 'insta', 'Instagram', '', true)
+                            .verified-contacts__close
+                                svg(viewBox="0 0 10 9").icon.icon-close
+                                    use(xlink:href="static/img/svg/symbol/sprite.svg#close")
                         .stats
-                            +statsItem(img, '25', 'Занятий пройдено')
-                            +statsItem(img, '139', 'Часов общего обучения')
-                            +statsItem(img, '15', 'Запланированныx занятий')
+                            +statsItem('0 0 22 21', 'static/img/svg/symbol/sprite.svg#cup', 'cup', '25', 'Занятий пройдено')
+                            +statsItem('0 0 30 31', 'static/img/svg/symbol/sprite.svg#time', 'time', '139', 'Часов общего обучения')
+                            +statsItem('0 0 22 19', 'static/img/svg/symbol/sprite.svg#list', 'list', '15', 'Запланированныx занятий')
         footer
             .container
                 .footer
