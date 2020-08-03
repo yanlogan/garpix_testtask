@@ -86,6 +86,14 @@ body {
         width: 22px;
         fill: $color-stats-3;
     }
+    &-add {
+        width: 20px;
+        fill: transparentize(#fff, 0.5);
+    }
+    &-gender {
+        width: 10px;
+        fill: #fff;
+    }
 }
 
 .header {
@@ -113,6 +121,7 @@ body {
             input[type=text] {
                 width: 100%;
                 padding: 20px;
+                font-family: 'Montserrat', sans-serif;
                 color: $color-light;
                 background: $color-background-light;
                 border: none;
@@ -202,7 +211,7 @@ body {
                 display: flex;
                 flex-flow: column;
                 align-items: center;
-                margin-bottom: 18px;
+                margin-bottom: 30px;
                 &-img {
                     width: 260px;
                     height: 260px;
@@ -218,6 +227,7 @@ body {
                     font-size: 14px;
                     button {
                         padding: 15px 20px;
+                        font-family: 'Montserrat', sans-serif;
                         color: #fff;
                         background: $color-secondary;
                         border: none;
@@ -407,6 +417,90 @@ body {
                     &:last-child {
                         margin: 0;
                     }
+                }
+            }
+        }
+    }
+    section {
+        .about {
+            margin-bottom: 75px;
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                &__left {
+                    h1 {
+                        margin: 0;
+                        margin-bottom: 13px;
+                        padding: 0;
+                        font-size: 36px;
+                        // font-weight: 700;
+                    }
+                    .profile-id {
+                        font-size: 14px;
+                    }
+                }
+                
+            }
+            &-btn {
+                button {
+                    display: flex;
+                    align-items: center;
+                    padding: 20px 30px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 16px;
+                    color: #fff;
+                    background: $color-accent;
+                    border: none;
+                    border-radius: 50px;
+                    outline: none;
+                }
+                span {
+                    margin-left: 10px;
+                }
+            }
+            &-content {
+                h3 {
+                    margin: 0;
+                    margin-bottom: 5px;
+                    padding: 0;
+                    font-size: 24px;
+                    color: $color-light;
+                }
+                &__gender {
+                    display: flex;
+                    align-items: center;
+                    width: 115px;
+                    margin: 10px 0 40px;
+                    padding: 5px 15px;
+                    font-size: 14px;
+                    color: #fff;
+                    background: transparentize($color-secondary, 0.6);
+                    border-radius: 50px;
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+                &__text {
+                    h4 {
+                        margin: 0;
+                        margin-bottom: 15px;
+                        padding: 0;
+                    }
+                    p {
+                        font-size: 15px;
+                        color: transparentize(#000000, 0.3);
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+        .lessons {
+            &-header {
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 20px;
                 }
             }
         }
