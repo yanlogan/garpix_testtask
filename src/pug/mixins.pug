@@ -79,7 +79,8 @@ mixin statsItem(viewBox, href, id, count, text)
             .stats__item-count(class=`stats__item-count_${id}`)=count
             .stats__item-text=text
 
-mixin socialItem(img, title)
+mixin socialItem(viewBox, href, id, title)
     a.social__item(href="#")
         .social__item-img
-            img(src=img, alt=title)
+            svg(viewBox=viewBox class=`icon icon-${id}`)
+                use(xlink:href=href)
