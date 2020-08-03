@@ -1,10 +1,40 @@
-@import 'libs.scss';
+@import 'libs';
+@import 'variables';
 
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
 }
 
+$color-logo: #5BB6F4;
+
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1760px;
+    margin: 0 auto;
+}
+
+.icon {
+    display: inline-block;
+    &-logo {
+        width: 110px;
+        fill: $color-logo;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    &-left {
+        display: flex;
+    }
+    &-right {
+        display: flex;
+    }
 }

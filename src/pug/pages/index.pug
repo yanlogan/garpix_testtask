@@ -8,29 +8,31 @@ html
     body
         header
             .container
-                .header-left
-                    .header__logo
-                        img(src="", alt="")
-                    .header__title Профиль пользователя
-                .header-right
-                    .header__search
-                        form(action="")
-                            input(type="text" placeholder="Найти" name="search")
-                            button(type="submit")
-                                i.icon-search
-                    button.header__menu
-                        i.icon-menu
-                    .header__user
-                        .header__user-text
-                            .header__user-text-name Валентина Иванова
-                            .header__user-text-title Пользователь
-                        .header__user-profile
-                            .header__user-profile-img
-                                img(src="", alt="")
-                            i.icon-dropdown
-                    .header__notifications
-                        i.icon-bell
-                        .header__notifications-indicator.header__notifications-indicator_active
+                .header
+                    .header-left
+                        .header__logo
+                            svg(viewBox="0 0 111 65").icon.icon-logo
+                                use(xlink:href="static/img/svg/symbol/sprite.svg#logo")
+                        .header__title Профиль пользователя
+                    .header-right
+                        .header__search
+                            form(action="")
+                                input(type="text" placeholder="Найти" name="search")
+                                button(type="submit")
+                                    i.icon-search
+                        button.header__menu
+                            i.icon-menu
+                        .header__user
+                            .header__user-text
+                                .header__user-text-name Валентина Иванова
+                                .header__user-text-title Пользователь
+                            .header__user-profile
+                                .header__user-profile-img
+                                    img(src="", alt="")
+                                i.icon-dropdown
+                        .header__notifications
+                            i.icon-bell
+                            .header__notifications-indicator.header__notifications-indicator_active
         main
             .container
                 aside.sidebar-left
