@@ -25,8 +25,10 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1760px;
+    max-width: 1770px;
     margin: 0 auto;
+    // padding: 0 10px;
+    // overflow: visible;
 }
 
 .icon {
@@ -113,7 +115,8 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 18px 0;
+    padding-left: 10px;
     font-size: 16px;
     
     &-left, &-right {
@@ -156,6 +159,7 @@ body {
         }
     }
     &__menu {
+        position: relative;
         width: 54px;
         height: 54px;
         margin-left: 30px;
@@ -164,6 +168,7 @@ body {
         border: none;
         border-radius: 50%;
         background: $color-primary;
+        box-shadow: 0 20px 50px 0px rgba(1,104,255,0.2), 0 20px 20px 0 rgba(0,0,0,0.1);
     }
     &__user {
         display: flex;
@@ -215,11 +220,12 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 50px 0 80px;
+    background: $color-background-light;
     aside {
         &.sidebar-left {
-            width: 260px;
+            width: 280px;
             margin-right: 40px;
-
+            padding-left: 10px;
             .user {
                 display: flex;
                 flex-flow: column;
@@ -247,6 +253,7 @@ body {
                         border: none;
                         border-radius: 50px;
                         outline: none;
+                        box-shadow: 0 20px 50px 0 #F1D7DB;
                     }
                 }
             }
@@ -296,6 +303,9 @@ body {
                 align-items: center;
                 padding: 22px 30px;
                 border-radius: 10px;
+                box-shadow: 0 20px 20px 0 rgba(0,0,0,0.05), 
+                            0 30px 60px 0px rgba(1,104,255,0.15), 
+                            0 0 20px 0 rgba(0,0,0,0.07);
                 &__img {
                     margin-right: 18px;
                 }
@@ -439,9 +449,7 @@ body {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        article {
-            border-top: 3px solid $color-background;
-        }
+
         .about {
             width: 100%;
             margin-bottom: 60px;
@@ -475,6 +483,7 @@ body {
                     border: none;
                     border-radius: 50px;
                     outline: none;
+                    box-shadow: 0 20px 50px 0 #DDF6DA;
                 }
                 span {
                     margin-left: 10px;
@@ -519,6 +528,7 @@ body {
         .lessons {
             position: relative;
             flex: 1;
+            border-top: 3px solid $color-background;
             &:before {
                 display: block;
                 content: '';
@@ -552,6 +562,9 @@ body {
                 margin-bottom: 20px;
                 border-radius: 10px;
                 overflow: hidden;
+                box-shadow: 0 20px 20px 0 rgba(0,0,0,0.05), 
+                            0 30px 60px 0px rgba(1,104,255,0.15), 
+                            0 0 20px 0 rgba(0,0,0,0.07);
 
                 &-live {
                     padding: 20px 30px;
@@ -628,9 +641,11 @@ body {
                     }
                     &_general {
                         background: $color-primary;
+                        box-shadow: 0 20px 50px 0 #C3E2F8;
                     }
                     &_danger {
                         background: $color-secondary;
+                        box-shadow: 0 20px 50px 0 #F1D7DB;
                     }
                 }
                 &-img {
@@ -688,11 +703,11 @@ body {
                 
             }
         }
-
         .contacts {
             position: relative;
             width: 360px;
             margin-left: 40px;
+            border-top: 3px solid $color-background;
             &:before {
                 display: block;
                 content: '';
@@ -719,6 +734,12 @@ body {
                 margin-bottom: 10px;
                 padding: 38px 30px;
                 border-radius: 10px;
+                &:hover {
+                    transition: 0.3s;
+                    box-shadow: 0 20px 20px 0 rgba(0,0,0,0.05), 
+                                0 30px 60px 0px rgba(1,104,255,0.3), 
+                                0 0 20px 0 rgba(0,0,0,0.07);
+                }
                 &-content {
                     max-width: 180px;
                 }
@@ -772,6 +793,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 45px 0;
+        padding-left: 10px;
         font-size: 12px;
         color: transparentize(#fff, 0.4);
         .social {
