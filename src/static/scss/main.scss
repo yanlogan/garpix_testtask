@@ -1,22 +1,11 @@
 @import 'libs';
 @import 'variables';
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
-}
-
-$color-logo: #5BB6F4;
+@import 'fonts';
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat Regular', sans-serif;
 }
 
 * {
@@ -27,8 +16,6 @@ body {
     width: 100%;
     max-width: 1770px;
     margin: 0 auto;
-    // padding: 0 10px;
-    // overflow: visible;
 }
 
 .icon {
@@ -138,7 +125,7 @@ body {
             input[type=text] {
                 width: 100%;
                 padding: 20px;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Montserrat Medium', sans-serif;
                 color: $color-light;
                 background: $color-background-light;
                 border: none;
@@ -177,6 +164,7 @@ body {
         &-text {
             margin-right: 10px;
             text-align: right;
+            font-family: 'Montserrat Medium', sans-serif;
             &-title {
                 font-size: 14px;
                 color: $color-light;
@@ -193,9 +181,9 @@ body {
                 border-radius: 50%;
                 overflow: hidden;
                 img {
-                    max-width: 100px;
+                    max-width: 150px;
                     object-fit: cover;
-                    object-position: -15px -2px;
+                    object-position: -37px -3px;
                 }
             }
         }
@@ -226,6 +214,7 @@ body {
             width: 280px;
             margin-right: 40px;
             padding-left: 10px;
+            font-family: 'Montserrat Semi Bold', sans-serif;
             .user {
                 display: flex;
                 flex-flow: column;
@@ -247,7 +236,7 @@ body {
                     font-size: 14px;
                     button {
                         padding: 15px 20px;
-                        font-family: 'Montserrat', sans-serif;
+                        font-family: 'Montserrat Medium', sans-serif;
                         color: #fff;
                         background: $color-secondary;
                         border: none;
@@ -336,6 +325,7 @@ body {
                     background: $color-background;
                     border-radius: 10px;
                     &-title {
+                        font-family: 'Montserrat Medium', sans-serif;
                         font-size: 18px;
                         margin-bottom: 20px;
                     }
@@ -367,15 +357,18 @@ body {
                         }
                     }
                     &-title {
-                        // font-weight: 700;
+                        font-family: 'Montserrat Semi Bold', sans-serif;
+                        font-size: 14px;
                     }
                     &-contact {
+                        font-family: 'Montserrat Medium', sans-serif;
                         color: $color-light;
                     }
                     &_new {
                         margin: 0;
                         padding-top: 10px;
                         padding-bottom: 0;
+                        font-family: 'Montserrat Semi Bold', sans-serif;
                         color: $color-light;
                         .verified-contacts__item-img {
                             background: $color-light;
@@ -436,7 +429,9 @@ body {
                         }
                     }
                     &-text {
-                        width: 140px;
+                        font-family: 'Montserrat Medium', sans-serif;
+                        font-size: 14px;
+                        max-width: 140px;
                     }
                     &:last-child {
                         margin: 0;
@@ -462,10 +457,11 @@ body {
                         margin: 0;
                         margin-bottom: 13px;
                         padding: 0;
+                        font-family: 'Montserrat Semi Bold', sans-serif;
                         font-size: 36px;
-                        // font-weight: 700;
                     }
                     .profile-id {
+                        font-family: 'Montserrat Medium', sans-serif;
                         font-size: 14px;
                     }
                 }
@@ -476,7 +472,7 @@ body {
                     display: flex;
                     align-items: center;
                     padding: 20px 30px;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'Montserrat Semi Bold', sans-serif;
                     font-size: 16px;
                     color: #fff;
                     background: $color-accent;
@@ -494,6 +490,7 @@ body {
                     margin: 0;
                     margin-bottom: 5px;
                     padding: 0;
+                    font-family: 'Montserrat Semi Bold', sans-serif;
                     font-size: 24px;
                     color: $color-light;
                 }
@@ -503,6 +500,7 @@ body {
                     width: 115px;
                     margin: 10px 0 40px;
                     padding: 5px 15px;
+                    font-family: 'Montserrat Medium', sans-serif;
                     font-size: 14px;
                     color: #fff;
                     background: transparentize($color-secondary, 0.6);
@@ -516,6 +514,7 @@ body {
                         margin: 0;
                         margin-bottom: 15px;
                         padding: 0;
+                        font-family: 'Montserrat Semi Bold', sans-serif;
                     }
                     p {
                         font-size: 15px;
@@ -546,9 +545,11 @@ body {
                 h2 {
                     margin: 0;
                     padding: 20px 0;
+                    font-family: 'Montserrat Medium', sans-serif;
                     font-size: 20px;
                 }
                 a {
+                    font-family: 'Montserrat Medium', sans-serif;
                     &:link, &:active, &:visited {
                         color: $color-primary;
                     }
@@ -574,6 +575,7 @@ body {
                         display: flex;
                         margin-bottom: 8px;
                         span {
+                            font-family: 'Montserrat Semi Bold', sans-serif;
                             font-size: 22px;
                             text-transform: uppercase;
                             color: $color-live;
@@ -589,12 +591,14 @@ body {
                         }
                     }
                     &-title {
+                        font-family: 'Montserrat Medium', sans-serif;
                         font-size: 22px;
                         margin-bottom: 5px;
                     }
                     &-teacher {
                         display: flex;
                         align-items: center;
+                        font-family: 'Montserrat Medium', sans-serif;
                         font-size: 18px;
                         .teacher-avatar {
                             width: 40px;
@@ -612,7 +616,7 @@ body {
                         display: flex;
                         align-items: center;
                         margin-bottom: 14px;
-                        font-family: 'Roboto', sans-serif;
+                        font-family: 'Roboto Regular', sans-serif;
                         font-size: 31px;
                         span {
                             margin-left: 10px;
@@ -628,6 +632,7 @@ body {
                     display: block;
                     width: 164px;
                     padding: 12px 20px;
+                    font-family: 'Montserrat Medium', sans-serif;
                     font-size: 14px;
                     color: #fff;
                     text-decoration: none;
@@ -679,18 +684,20 @@ body {
                     .teacher {
                         &-title {
                             margin-bottom: 5px;
+                            font-family: 'Montserrat Medium', sans-serif;
                             font-size: 12px;
                             color: $color-light;
                         }
                     }
                 }
                 &-title {
+                    font-family: 'Montserrat Semi Bold', sans-serif;
                     font-size: 18px;
                     font-weight: 700;
                 }
                 &-day {
                     margin-right: 40px;
-                    font-family: 'Roboto', sans-serif;
+                    font-family: 'Roboto Medium', sans-serif;
                     text-align: right;
                 }
                 &-date {
@@ -722,6 +729,7 @@ body {
                 h2 {
                     margin: 0;
                     padding: 20px 0;
+                    font-family: 'Montserrat Medium', sans-serif;
                     font-size: 20px;
                 }
             }
@@ -733,6 +741,8 @@ body {
                 height: 150px;
                 margin-bottom: 10px;
                 padding: 38px 30px;
+                font-family: 'Roboto Regular', sans-serif;
+                font-size: 14px;
                 border-radius: 10px;
                 &:hover {
                     transition: 0.3s;
@@ -756,9 +766,10 @@ body {
                 }
                 &-name {
                     margin-bottom: 7px;
+                    font-family: 'Montserrat Medium', sans-serif;
+                    font-size: 16px;
                 }
                 &-subject {
-                    font-size: 14px;
                     color: $color-light;
                     margin-bottom: 10px;
                 }
