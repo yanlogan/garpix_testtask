@@ -70,63 +70,98 @@ html
                             .calendar__close
                                 svg(viewBox="0 0 10 9").icon.icon-close
                                     use(xlink:href="static/img/svg/symbol/sprite.svg#close")
-                    section.content
-                        article.about
-                            .about-header
-                                .about-header__left
-                                    h1 Профиль
-                                    .profile-id ID 1232345
-                                .about-header__right
-                                    .about-btn
-                                        button
-                                            svg(viewBox="0 0 22 22").icon.icon-add
-                                                use(xlink:href="static/img/svg/symbol/sprite.svg#add")
-                                            span Разместить урок
-                            .about-content
-                                h3 Валентина Константинопольская
-                                span 35 лет, Москва
-                                .about-content__gender
-                                    svg(viewBox="0 0 10 16").icon.icon-gender
-                                        use(xlink:href="static/img/svg/symbol/sprite.svg#female")
-                                    span Женский
-                                .about-content__text
-                                    h4 Обо мне
-                                    p Для современного мира социально-экономическое развитие требует определения и уточнения переосмысления внешнеэкономических политик. Высокотехнологичная концепция общественного уклада требует определения и уточнения своевременного выполнения сверхзадачи. А также действия представителей оппозиции и по сей день остаются уделом либералов, которые жаждут быть обнародованы.
-                        article.lessons
-                            .lessons-header
-                                h2 Мои занятия
-                                a(href="#") Все занятия
-                            .lessons-content
-                                +lessonsItem('', 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00', true)
-                                +lessonsItem('static/img/lesson_1.png', 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00', false)
-                                +lessonsItem('static/img/lesson_2.png', 'Татьяна Николаевна', 'Спелая клубника', '18 Июн. 2020', 'в 18:00', false)
-                                +lessonsItem('static/img/lesson_3.png', 'Татьяна Николаевна', 'Секреты массажа', '18 Июн. 2020', 'в 18:00', false)
-                                +lessonsItem('static/img/lesson_4.png', 'Татьяна Николаевна', 'Правила приготовления пиццы', '18 Июн. 2020', 'в 18:00', false)
-                        article.contacts
-                            .contacts-header
-                                h2 Контакты
-                            .contacts-content
-                                +contactsItem('static/img/contact_1.jpg', 'Владимир Иванович', 'Математика', '4.8')
-                                +contactsItem('static/img/contact_2.jpg', 'Татьяна Николаевна', 'География', "4.9").contacts__item_hover
-                                +contactsItem('static/img/contact_1.jpg', 'Сергей Степанович', 'Математика', "4.8")
-                                +contactsItem('static/img/contact_2.jpg', 'Анна Алексеевна', 'Информатика', "4.8")
-                                +contactsItem('static/img/contact_1.jpg', 'Сергей Степанович', 'Математика', "4.8")
-                    aside.sidebar-right
-                        .verified-contacts
-                            ul.verified-contacts__list
-                                .verified-contacts__list-title Подтвержденные контакты
-                                +verifiedContactsItem('0 0 24 18', 'static/img/svg/symbol/sprite.svg#email', 'email', 'Email', 'myemail@mail.ru', false)
-                                +verifiedContactsItem('0 0 24 24', 'static/img/svg/symbol/sprite.svg#phone', 'phone', 'Телефон', '+7 (495) 123-45-67', false)
-                                +verifiedContactsItem('0 0 13 28', 'static/img/svg/symbol/sprite.svg#facebook', 'facebook', 'Facebook', 'Владимир Ивано..', false)
-                                +verifiedContactsItem('0 0 19 12', 'static/img/svg/symbol/sprite.svg#vk', 'vk', 'Вконтакте', '', true)
-                                +verifiedContactsItem('0 0 19 19', 'static/img/svg/symbol/sprite.svg#insta', 'insta', 'Instagram', '', true)
-                            .verified-contacts__close
+                    aside.sidebar-mobile
+                        .user
+                            .user-img
+                                img(src="static/img/avatar.jpg", alt="Валентина Константинопольская")
+                            .user-btn
+                                button Стать преподавателем
+                        .menu
+                            ul
+                                li
+                                    a(href="#").menu__item.menu__item_active Мои данные
+                                li
+                                    a(href="#").menu__item Мои занятия
+                                li
+                                    a(href="#").menu__item Мои преподаватели
+                                li
+                                    a(href="#").menu__item Чат
+                                li
+                                    a(href="#").menu__item Мой кошелек
+                                li
+                                    a(href="#").menu__item Настройки
+                                li
+                                    a(href="#").menu__item.menu__item_danger Выход
+                        .calendar
+                            .calendar__img
+                                svg(viewBox="0 0 62 57").icon.icon-calendar
+                                    use(xlink:href="static/img/svg/symbol/sprite.svg#calendar")
+                            .calendar__text Мой календарь
+                            .calendar__close
                                 svg(viewBox="0 0 10 9").icon.icon-close
                                     use(xlink:href="static/img/svg/symbol/sprite.svg#close")
-                        .stats
-                            +statsItem('0 0 22 21', 'static/img/svg/symbol/sprite.svg#cup', 'cup', '25', 'Занятий пройдено')
-                            +statsItem('0 0 30 31', 'static/img/svg/symbol/sprite.svg#time', 'time', '139', 'Часов общего обучения')
-                            +statsItem('0 0 22 19', 'static/img/svg/symbol/sprite.svg#list', 'list', '15', 'Запланированныx занятий')
+                    aside.hamburger
+                        .hamburger__item
+                        .hamburger__item
+                        .hamburger__item
+                    section
+                        .content
+                            article.about
+                                .about-header
+                                    .about-header__left
+                                        h1 Профиль
+                                        .profile-id ID 1232345
+                                    .about-header__right
+                                        .about-btn
+                                            button
+                                                svg(viewBox="0 0 22 22").icon.icon-add
+                                                    use(xlink:href="static/img/svg/symbol/sprite.svg#add")
+                                                span Разместить урок
+                                .about-content
+                                    h3 Валентина Константинопольская
+                                    span 35 лет, Москва
+                                    .about-content__gender
+                                        svg(viewBox="0 0 10 16").icon.icon-gender
+                                            use(xlink:href="static/img/svg/symbol/sprite.svg#female")
+                                        span Женский
+                                    .about-content__text
+                                        h4 Обо мне
+                                        p Для современного мира социально-экономическое развитие требует определения и уточнения переосмысления внешнеэкономических политик. Высокотехнологичная концепция общественного уклада требует определения и уточнения своевременного выполнения сверхзадачи. А также действия представителей оппозиции и по сей день остаются уделом либералов, которые жаждут быть обнародованы.
+                            article.lessons
+                                .lessons-header
+                                    h2 Мои занятия
+                                    a(href="#") Все занятия
+                                .lessons-content
+                                    +lessonsItem('', 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00', true)
+                                    +lessonsItem('static/img/lesson_1.png', 'Татьяна Николаевна', '101 рецепт шаурмы дома', '18 Июн. 2020', 'в 18:00', false)
+                                    +lessonsItem('static/img/lesson_2.png', 'Татьяна Николаевна', 'Спелая клубника', '18 Июн. 2020', 'в 18:00', false)
+                                    +lessonsItem('static/img/lesson_3.png', 'Татьяна Николаевна', 'Секреты массажа', '18 Июн. 2020', 'в 18:00', false)
+                                    +lessonsItem('static/img/lesson_4.png', 'Татьяна Николаевна', 'Правила приготовления пиццы', '18 Июн. 2020', 'в 18:00', false)
+                            article.contacts
+                                .contacts-header
+                                    h2 Контакты
+                                .contacts-content
+                                    +contactsItem('static/img/contact_1.jpg', 'Владимир Иванович', 'Математика', '4.8')
+                                    +contactsItem('static/img/contact_2.jpg', 'Татьяна Николаевна', 'География', "4.9").contacts__item_hover
+                                    +contactsItem('static/img/contact_1.jpg', 'Сергей Степанович', 'Математика', "4.8")
+                                    +contactsItem('static/img/contact_2.jpg', 'Анна Алексеевна', 'Информатика', "4.8")
+                                    +contactsItem('static/img/contact_1.jpg', 'Сергей Степанович', 'Математика', "4.8")
+                    aside.sidebar-right
+                            .verified-contacts
+                                .verified-contacts-title Подтвержденные контакты
+                                ul.verified-contacts__list
+                                    +verifiedContactsItem('0 0 24 18', 'static/img/svg/symbol/sprite.svg#email', 'email', 'Email', 'myemail@mail.ru', false)
+                                    +verifiedContactsItem('0 0 24 24', 'static/img/svg/symbol/sprite.svg#phone', 'phone', 'Телефон', '+7 (495) 123-45-67', false)
+                                    +verifiedContactsItem('0 0 13 28', 'static/img/svg/symbol/sprite.svg#facebook', 'facebook', 'Facebook', 'Владимир Ивано..', false)
+                                    +verifiedContactsItem('0 0 19 12', 'static/img/svg/symbol/sprite.svg#vk', 'vk', 'Вконтакте', '', true)
+                                    +verifiedContactsItem('0 0 19 19', 'static/img/svg/symbol/sprite.svg#insta', 'insta', 'Instagram', '', true)
+                                .verified-contacts__close
+                                    svg(viewBox="0 0 10 9").icon.icon-close
+                                        use(xlink:href="static/img/svg/symbol/sprite.svg#close")
+                            .stats
+                                +statsItem('0 0 22 21', 'static/img/svg/symbol/sprite.svg#cup', 'cup', '25', 'Занятий пройдено')
+                                +statsItem('0 0 30 31', 'static/img/svg/symbol/sprite.svg#time', 'time', '139', 'Часов общего обучения')
+                                +statsItem('0 0 22 19', 'static/img/svg/symbol/sprite.svg#list', 'list', '15', 'Запланированныx занятий')
         footer
             .container
                 .footer

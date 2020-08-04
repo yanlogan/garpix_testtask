@@ -1,0 +1,169 @@
+$tablet: 788px;
+$mobile: 360px;
+
+@media screen and (max-width: 1759px) {
+    .main {
+        section {
+            .content {
+                flex-direction: column;
+                .lessons {
+                    margin-bottom: 20px;
+                }
+                .contacts {
+                    margin: 0;
+                    &-content {
+                        margin: 0;
+                        flex-flow: row wrap;
+                        justify-content: space-between;
+                    }
+                    &__item {
+                        flex-basis: 48%;
+                        min-width: 360px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1365px) {
+    .main {
+        section {
+            .content {
+                .lessons {
+                    &__item {
+                        &-content {
+                            &-left {
+                                max-width: 200px;
+                            }
+                        }
+                        &-live {
+                            &-img {
+                                width: 24px;
+                                height: 28px;
+                            }
+                            &-indicator {
+                                span {
+                                    font-size: 20px;
+                                }
+                            }
+                            &-title {
+                                font-size: 20px;
+                            }
+                            &-teacher {
+                                font-size: 16px;
+                            }
+                            &-time {
+                                justify-content: center;
+                                font-size: 26px;
+                            }
+                        }
+                        &-teacher, &-day {
+                            font-size: 14px;
+                        }
+                        &-day {
+                            margin-right: 20px;
+                        }
+                        &-title {
+                            font-size: 16px;
+                        }
+                        &-btn {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .contacts {
+                    &-content {
+                        flex-flow: column;
+                    }
+                    &__item {
+                        flex-basis: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1269px) {
+    .main {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 50px;
+        section {
+            flex-grow: 1;
+            flex-basis: 650px;
+            margin-bottom: 20px;
+            padding-right: 10px;
+            .content {
+                .about {
+                    &-content {
+                        h3 {
+                            font-size: 22px;
+                        }
+                        &__text {
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    &-btn {
+                        button {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        aside {
+            &.sidebar-right {
+                margin: 0;
+                // flex-direction: row;
+                flex-basis: 100%;
+
+                .verified-contacts {
+                    margin-bottom: 0;
+                    &__list {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    &__item {
+                        padding: 0;
+                        margin-right: 30px;
+                        margin-bottom: 30px;
+                        &:not(.verified-contacts__item_new) + .verified-contacts__item_new {
+                            border: none;
+                        }
+                    }
+                }
+                .stats {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        &-left {
+            flex-basis: 135px;
+        }
+        &__title {
+            display: none;
+        }
+    }
+    .main {
+        aside {
+            &.sidebar-left {
+                display: none;
+            }
+            &.hamburger {
+                display: block;
+            }
+        }
+    }
+}
