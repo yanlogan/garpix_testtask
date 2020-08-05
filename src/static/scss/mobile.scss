@@ -1,6 +1,3 @@
-$tablet: 788px;
-$mobile: 360px;
-
 @media screen and (max-width: 1759px) {
     .main {
         section {
@@ -120,7 +117,6 @@ $mobile: 360px;
         aside {
             &.sidebar-right {
                 margin: 0;
-                // flex-direction: row;
                 flex-basis: 100%;
 
                 .verified-contacts {
@@ -147,7 +143,7 @@ $mobile: 360px;
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
     .header {
         &-left {
             flex-basis: 135px;
@@ -164,6 +160,250 @@ $mobile: 360px;
             &.hamburger {
                 display: block;
             }
+        }
+        section {
+            .content {
+                .about {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 791px) {
+    body {
+        font-size: 14px;
+    }
+    .header {
+        &__search {
+            form {
+                input[type=text] {
+                    display: none;
+                }
+                button {
+                    background: none;
+                }
+            }
+        }
+        &__user {
+            &-text {
+                &-name {
+                    font-size: 14px;
+                }
+                &-title {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .main {
+        justify-content: flex-start;
+        aside {
+            &.sidebar-right {
+                .verified-contacts {
+                    &__list {
+                        flex-flow: column nowrap;
+                    }
+                    &__item {
+                        margin: 0;
+                        padding-bottom: 20px;
+                        &_new {
+                            padding-top: 10px;
+                            padding-bottom: 0;
+                        }
+                        &:not(.verified-contacts__item_new) + .verified-contacts__item_new {
+                            border-top: 1px solid $color-menu-border;
+                        }
+                    }
+                }
+                .stats {
+                    flex-direction: column;
+                }
+            }
+        }
+        section {
+            flex-basis: 320px;
+            .content {
+                .about {
+                    &-header {
+                        &__left {
+                            h1 {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                    &-content {
+                        h3 {
+                            font-size: 18px;
+                        }
+                        &__text {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    &-btn {
+                        button {
+                            padding: 10px 15px;
+                        }
+                    }
+                }
+                .lessons {
+                    &__item {
+                        &-content {
+                            &-left {
+                                max-width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        section {
+            .content {
+                .lessons {
+                    &__item {
+                        &-content {
+                            &-right {
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                        }
+                        &-day {
+                            display: flex;
+                            margin: 0;
+                        }
+                        &-date {
+                            margin-right: 5px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 596px) {
+    .header {
+        &__user {
+            display: none;
+        }
+    }
+    .main {
+        section {
+            .content {
+                .lessons {
+                    &__item {
+                        &-img {
+                            display: none;
+                        }
+                        &-live {
+                            &-title {
+                                font-size: 16px;
+                            }
+                            &-teacher {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 536px) {
+    .main {
+        section {
+            .content {
+                .lessons {
+                    &__item {
+                        flex-direction: column;
+                        height: auto;
+                        &-content {
+                            flex-direction: column;
+                            &-left {
+                                margin-bottom: 20px;
+                            }
+                            &-right {
+                                align-items: flex-start;
+                            }
+                        }
+                        &-right {
+                            margin-top: 15px;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                        }
+                        &-actions {
+                            width: 100%;
+                            margin-top: 15px;
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-flow: row wrap;
+                        }
+                        &-btn {
+                            &_general {
+                                margin-right: 10px;
+                            }
+                            &_danger {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 471px) {
+    .main {
+        section {
+            .content {
+                .lessons {
+                    &__item {
+                        &-btn {
+                            width: 100%;
+                            &_general {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .main {
+        section {
+            .content {
+                .about {
+                    &-header {
+                        flex-direction: column;
+                        &__left {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        flex-direction: column;
+        .copyright {
+            margin-bottom: 15px;
         }
     }
 }
